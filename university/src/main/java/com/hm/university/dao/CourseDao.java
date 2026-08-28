@@ -1,0 +1,26 @@
+package com.hm.university.dao;
+
+import com.hm.university.domain.Course;
+import org.springframework.stereotype.Repository;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.TypedQuery;
+import jakarta.persistence.criteria.CriteriaQuery;
+import java.util.List;
+import java.util.Optional;
+
+/**
+ * Data Access Object Class for the Course Entity.
+ * Uses only jakarta persistence libraries.
+ */
+@Repository
+public class CourseDao {
+    private EntityManager em;
+
+    public CourseDao(EntityManagerFactory emf) {
+        this.em = emf.createEntityManager();
+    }
+
+
+}
