@@ -23,4 +23,9 @@ public class CourseDao {
     }
 
 
+
+
+    public List<Course> findByCriteria(CriteriaQuery<Course> criteria){
+        return em.createQuery(criteria).getResultList();
+    }
 }
